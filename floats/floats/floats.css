@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Fill in your CSS Below */
+
+
+body {
+
+}
+
+header {
+
+	background: #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+section {
+	width:33%;
+	padding:25px;
+
+}
+#full {
+	clear:both;
+}
+#topsection{
+	
+}
+#left {
+float:left;
+background-color:#666;
+}
+
+#middle {
+float:left;
+background-color:#888;
+}
+
+#right {
+float:left;
+background-color:#666;
+}
+
+#full {
+	width:100%;
+}
+#division1{
+	padding:25px;
+	width:100%;
+	clear:right;
+	display:block;
+	background-color:#eee;
+}
+#division2 {
+	width:100%;
+	padding:25px;
+	clear:right;
+	display:block;
+	background-color:#6ea3da;
+}
+
+aside {
+	background-color:#fff;
+	margin-left:50px;
+	margin-top:25px;
+	float:left;
+	width:100px;
+	height:100px;
+}
+
+footer {
+	padding:25px;
+	width:100%;
+	clear:both;
+	background-color:#ccc;
+}

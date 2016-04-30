@@ -1,0 +1,17 @@
+
+CSS ELEMENTS
+
+USEFUL ATTRIBUTES
+display:none; - removes existence of object from the page
+
+FLOAT
+clear - clears the float so other elements after it won't get thrown out of the flow
+of content.
+
+POSITION
+absolute - position according to the document
+fixed - position according to the window
+relative - position according to relative(nearby) elements
+
+Body is static by default. If you create a relative element and create absolute elements
+inside of it the elements will be absolute to the relative element.

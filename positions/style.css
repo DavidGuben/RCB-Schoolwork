@@ -1,0 +1,29 @@
+body {
+	padding-left:280px;
+	padding-right:280px;
+}
+
+#relative {
+	position:relative;
+	width:600px;
+	height:200px;
+	background-color:#999;
+	margin-bottom:20px;
+}
+#absolute {
+	position:absolute;
+	right:-10px;
+	bottom: 0px;
+	width:250px;
+	height:100px;
+	background-color:#555;
+}
+#fixed {
+	height:80px;
+	width:150px;
+	position:fixed;
+	background-color:#eee;
+}
+h1 {
+	text-align:center;
+}
