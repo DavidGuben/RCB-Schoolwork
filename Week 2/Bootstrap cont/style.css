@@ -1,0 +1,13 @@
+.nav-pills {
+	float:right;
+	margin-top:5px;
+}
+
+.img {
+	width:150px;
+	height:150px;
+	background-color:#eee;
+}
+.about {
+	margin-left:10px;
+}
