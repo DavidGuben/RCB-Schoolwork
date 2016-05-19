@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My First Function</title>
+</head>
+<body>
+	
+	<script>
+		// Creates Function called "adder" with three arguments (x, y, z) that get passed into it.
+		function adder(x,y,z) {
+			console.log(x + y + z);
+		}
+
+		// Creates a Function called "multiplier" with three arguments (x, y, z) that gets passed into it
+			function multiplier(x,y,z) {
+			console.log(x * y * z);
+		}
+
+		// Creates a function called "isString" with three arguments (x, y, z) that gets passed into it. 
+		function isString(x,y,z) {
+			if (typeof x == 'string' && typeof y == 'string' && typeof z == 'string') {
+				console.log (x , y , z);
+			}
+		}
+
+		// Creates a function called "vowelChecker" that takes in a single argument (x)
+			function vowelChecker(x) {
+				 if(x == 'e') {
+				 		console.log('yes');
+				 } else {
+				 	console.log('no');
+				 }
+			}
+
+		// FUNCTION EXECUTION
+		// ================================================================================
+
+		// Add in the lines of code below necessary to "call" the functions you created above.
+		
+		
+		// Call the adder function here
+		adder(1,2,3);
+		console.log("-------------------")
+
+		
+		// Call the multiplier function here. 
+
+		multiplier(1,2,3);
+		console.log("-------------------")
+
+
+		// Call the isString function here.
+
+		isString('x','y','z');
+		console.log("-------------------")
+
+
+		// Call the vowelChecker function here.
+		vowelChecker('e');
+
+	</script>
+
+</body>
+</html>
