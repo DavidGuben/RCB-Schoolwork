@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+<div id="game"></div>
+<script type="text/javascript">
+// step1. define an two arrays of variables for rock papers and scissors
+// step2. create a loop that asks for the conditions "if array 1 = rock and array 2 = paper" then alert rock wins and if the arrays are equal to eachother then run the loop again
+// step3.  user chooses r,p or s
+// step4. computer chooses randomly r,p or s
+
+//onkeyup is after a key is a pressed
+// Create an array that lists out all of the options
+var options = ['r','p','s'];
+
+// Captures Key Clicks
+document.onkeyup = function(event) {
+
+    // Determines which exact key was selected. Make it lowercase
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+    // Alerts with user guess
+    alert(userGuess);
+
+    // Create code to randomly choose one of the three options (Computer) 
+    var computerGuess = options[Math.floor(Math.random()*options.length)];
+
+    // Alerts with Computer guess
+    alert(computerGuess);
+
+}
+document.onkeyup = function(event) {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+    alert("user guess: " + userGuess);
+    alert("computer guess: " + computerGuess);
+
+
+}
+var computerChoices = ['r', 'p', 's'];
+
+document.onkeyup = function(event) {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+    if ((userGuess == 'r') || (userGuess == 'p') || (userGuess == 's')){
+
+        alert("user guess: " + userGuess);
+        alert("computer guess: " + computerGuess);
+
+    }
+}
+var computerChoices = ['r', 'p', 's'];
+
+document.onkeyup = function(event) {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+    if ((userGuess == 'r') || (userGuess == 'p') || (userGuess == 's')){
+
+        document.querySelector('#game').innerHTML = 'you chose: ' + userGuess + '. The computer chose: ' + computerGuess;
+
+    }
+}
+var computerChoices = ['r', 'p', 's'];
+var wins = 0;
+var losses = 0;
+var ties = 0;
+
+document.onkeyup = function(event) {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+    if ((userGuess == 'r') || (userGuess == 'p') || (userGuess == 's')){
+
+        var html = "<p>Press r, p or s to start playing</p>" +
+        "<p>wins: " + 
+        wins + 
+        "</p>" +
+        "<p>losses: " + 
+        losses + 
+        "</p>" +
+        "<p>ties: " + 
+        ties + 
+        "</p>";
+
+        document.querySelector('#game').innerHTML = html;
+
+    }
+}
+
+</script>
+</body>
+</html>
