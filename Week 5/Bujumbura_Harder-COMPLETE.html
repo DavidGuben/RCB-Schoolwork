@@ -1,0 +1,43 @@
+<!-- Application Purpose: To retrieve weather data on the city Bujumbura, Burundi  using the OpenWeatherMap API-->
+<html>
+<head>
+	<title>Bujumbura Data</title>
+</head>
+<body>
+	
+	<!-- Retrieved Data will be dumped here -->
+	<div class="city"></div>
+	<div class="wind"></div>
+	<div class="humidity"></div>
+	<div class="temp"></div>
+
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript">
+
+/* Things to accomplish:
+ * Get an API Key from OpenWeatherMap API
+ * Create an AJAX call to retrieve data
+ * Log the data in console
+ * Log the data in HTML
+ * Scream Ushindi (Victory in Swahili)! At the top of your lungs.	
+*/
+var APIKey = "98a62761801535864e026a5a4b1a4d87";
+
+var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=Bujumbura&appid=" + APIKey;
+
+$.ajax({url: queryURL, method: 'GET'})
+
+.done(function(response) {
+	console.log(response);
+	$('.city').html(response.name);
+	$('.wind').html(response.wind.speed);
+	$('.humidity').html(response.main.humidity);
+	$('.temp').html(response.main.temp);
+})
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>API func</title>
+</head>
+
+<body>  
+    <div id="buttons">
+        <button data-person="arnold schwarzenegger">I'll be back</button>
+        <button data-person="michael j fox">My happiness grows in direct proportion to my acceptance, and in inverse proportion to my expectations.</button>
+        <!--my created buttons-->
+        <button data-person="jim carrey">alllllrighty then</button>
+        <button data-person="elijah wood">not all those who wander are lost</button>
+        <button data-person="daniel radcliffe">you're a wizard harry</button>
+
+    <div id="gifsAppearHere">
+    <!--gifs will appear here-->
+    </div>
+
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript">
+
+    //on click functionality for all buttons
+    $('button').on('click', function() {
+
+        //p variable is data 'person'
+        var p = $(this).data('person');
+
+        //queryURL(api key)
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+        //ajax get method for the queryURL
+        $.ajax({
+                url: queryURL,
+                method: 'GET'
+            })
+
+            //done functionality for the response of the queryURL get method
+            .done(function(response) {
+                //variable making results equal the data of the response
+                var results = response.data;
+
+                //for loop creating the gifs
+                for (var i = 0; i < results.length; i++) {
+
+                    //creating a div with the class 'item'
+                    var gifDiv = $('<div class="item">')
+
+                    //creating a variable for the rating results for each gif
+                    var rating = results[i].rating;
+
+                    //displaying the rating along with text
+                    var p = $('<p>').text("Rating: " + rating);
+
+                    //variable creating images in html for each gif
+                    var personImage = $('<img>');
+
+                    //attaching the src attr to the image tags
+                    personImage.attr('src', results[i].images.fixed_height.url);
+
+                    //appends rating and gif to the 'gifDiv' div
+                    gifDiv.append(p)
+                    gifDiv.append(personImage)
+
+                    //appends the 'gifDiv' div to the 'gifsAppearHere' div
+                    $('#gifsAppearHere').prepend(gifDiv);
+                }
+
+            });
+    });
+</script>
+</body>
+
+</html>
