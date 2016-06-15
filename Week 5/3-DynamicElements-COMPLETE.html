@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Animal Buttons</title>
+</head>
+
+<body>
+    <button data-animal="cat">meow</button>
+    <button data-animal="dog">woof</button>
+    <button data-animal="bird">chirp</button>
+
+    <div id="gifsAppearHere">
+
+    <!--Gifs will appear here-->
+
+    </div>
+
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script type="text/javascript">
+
+    //On click function for the buttons	
+    $('button').on('click', function() {
+
+        //created a variable referencing itself and applying the data-animal element to it
+        var animal = $(this).data('animal');
+        
+        //created a variable with the queryURL and the animal variable in the query key to swap out the animal easily
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+        //ajax call to get queryURL
+        $.ajax({
+                url: queryURL,
+                method: 'GET'
+        })
+
+        		//done function for the ajax code
+            .done(function(response) {
+
+            	//console logging the response to view the response
+                console.log(response);
+
+                //created a variable holding the response data
+                var results = response.data;
+
+                //created a for loop looping the results length
+                for (var i = 0; i < results.length; i++) {
+
+                	//made a variable that creates 'div' tags
+                    var animalDiv = $('<div>');
+
+                    //made a variable that creates 'p' tags
+                    var p = $('<p>');
+
+                    //adds the rating from the results[] array to the p tags
+                    p.text(results[i].rating);
+
+                    //created a variable that creates img tags
+                    var animalImage = $('<img>');
+
+                    //attaches the src attribute to the img tags(the src equals the fixed_height.url located in results[].images)
+                    animalImage.attr('src', results[i].images.fixed_height.url);
+
+                    //appends the p tags to 'animalDiv'
+                    animalDiv.append(p);
+
+                    //appends 'animalImage' to 'animalDiv'
+                    animalDiv.append(animalImage);
+
+                    //appends the 'animalDiv' to 'gifsAppearHere'
+                    $('#gifsAppearHere').prepend(animalDiv);
+                }
+
+            });
+    });
+    </script>
+</body>
+
+</html>
