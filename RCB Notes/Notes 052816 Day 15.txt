@@ -1,0 +1,20 @@
+API - app program interface
+is a set of routines, protocols, and tools for building software applications.
+An API specifies how software components should interact and APIs are used when
+programming graphical user interface (GUI) components.
+
+A good API makes it easier to develop a program by providing all the building blocks.
+
+TYPES OF API
+Most operating environments, such as MS-Windows, provide APIs, allowing programmers to write
+applications consistent with the operating environment. Today, APIs are also specified by
+websites. For example, Amazon or eBay APIs allow developers to use the existing retail
+infrastructure to create specialized web stores. Third-party software developers also use
+Web APIs to create software solutions for end-users
+
+More generally, in object-oriented languages, an API usually includes a description of a
+set of class definitions, with a set of behaviors associated with those classes. This 
+abstract concept is associated with the real functionality exposed, or made available, 
+by the classes that are implemented in terms of class methods (or more generally by 
+all its public components hence all public methods, but also possibly including any internal 
+entity made public like: fields, constants, nested objects, enums, etc.).

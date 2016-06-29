@@ -1,0 +1,61 @@
+JAVASCRIPT 
+
+FUNCTIONS
+ creates an automated task that you can call multiple times by calling it by name.
+
+Syntax:
+var array1 = [1, 2, 3, 4];
+var array2 = [5,6,7,8];
+var array3 = [9,10,11,12];
+var array4 = [13,14,15,16];
+
+function arrayLoop(anyArray) {
+	for (i=0; i < anyArray.length;i++) {
+		console.log(anyArray[i]);
+	}
+}
+
+arrayLoop(array1);
+arrayLoop(array2);
+arrayLoop(array3);
+arrayLoop(array4);
+
+OBJECTS/(jSON) 
+objects are anything in javascript.
+ you can create arrays with objects to define variables and the variables value in
+the same array.
+
+syntax:
+var name = {
+	'Name': 'string or something',
+	'other': 'more text or whatever',
+	'variable1' : {
+		'variable2' : 'some information',
+ 	}
+};
+
+name.Name
+or 
+name['other']
+or name.variable1.variable2
+
+You can also embed a function into this
+
+syntax:
+variableName: function() {}
+
+THIS Keyword
+In JavaScript, the thing called this, is the object that "owns" the JavaScript code.
+The value of this, when used in a function, is the object that "owns" the function.
+The value of this, when used in an object, is the object itself.
+The this keyword in an object constructor does not have a value.
+The value of this will become the new object when the constructor is used to create an object.
+
+DOCUMENT WRITING FUNCTIONS
+var car = "I got a brand new car";
+document.getElementById("blue").innerHTML = car;  //by id
+document.getElementsByClassName("red")[0].innerHTML = car; //by class
+document.querySelector("#blue").innerHTML = car; //by id
+document.querySelector(".red").innerHTML = car; //by class
+document.write(car); //old way of doing it
+

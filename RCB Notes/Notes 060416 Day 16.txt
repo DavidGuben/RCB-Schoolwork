@@ -1,0 +1,22 @@
+API / AJAX
+
+AJAX BREAKDOWN
+XML or JSON: the text-only format used to transfer data from server to browser script. 
+Developers are increasingly using JSON over XML because of its native JavaScript compatibility.
+CSS: the language used to style how the data will look onscreen
+JavaScript: displays the data in the browser and processes user requests/interactions like clicks
+XMLHttpRequest objects: the keystone of AJAX, they actually retrieve the data with the server behind the scenes. 
+All modern browsers support XMLHttpRequests.
+
+jQuery.ajax()
+
+The XMLHttpRequest object is used to exchange data with a server.
+
+syntax:
+$.ajax ({
+	//URL to where the request is sent
+	url: '',
+	//method for manipulating data
+	method: 'GET/POST'
+
+})

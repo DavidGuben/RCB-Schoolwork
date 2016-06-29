@@ -1,0 +1,23 @@
+GITHUB - version control system
+
+LINKS
+https://www.wikiwand.com/en/Git_(software) - git doc.
+https://www.google.com/fonts - web fonts
+
+
+TERMS
+pull - download
+push - upload
+repository - directory
+
+PUSH PROCESS
+git add .
+git commit -m "message"
+git push origin master
+
+PULL PROCESS
+git fetch origin remotename
+
+
+
+

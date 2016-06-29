@@ -1,0 +1,37 @@
+LINKS
+
+google.com/fonts/
+fonts from google displayed via a link to an external stylesheet.
+
+typeplate.com/
+CSS template for better typography.
+
+http://fortawesome.github.io/Font-Awesome/3.2.1/
+Font made up of scalable vector icons that are easily editable.
+
+developer.mozilla.org/
+Mozilla developer network.
+
+ianlunn.github.io/hover/
+documentation on the hover pseudo-class.
+
+codepen.io
+front end dev coding interface.
+
+http://getbootstrap.com/css/
+Global CSS settings, fundamental HTML elements styled and enhanced with 
+extensible classes, and an advanced grid system.
+
+NOTES
+
+PSEUDO CLASSES
+determines what a selector does during a defined state 
+(ie. a:hover {} - link being hovered over by mouse.)
+
+PSEUDO ELEMENTS
+styles specific parts of an element
+(syntax: selector::pseudo-element {})
+
+BOOTSTRAP (CSS)
+Global CSS settings, fundamental HTML elements styled and enhanced with 
+extensible classes, and an advanced grid system.

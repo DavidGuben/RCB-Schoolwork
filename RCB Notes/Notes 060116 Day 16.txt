@@ -1,0 +1,24 @@
+AJAX AND APIs
+
+API 
+bridge between different components.
+
+AJAX
+AJAX stands for Asynchronous JavaScript and XML. In a nutshell, it is the use of 
+the XMLHttpRequest object to communicate with server-side scripts. 
+
+AJAX call example:
+
+var APIKey = "98a62761801535864e026a5a4b1a4d87";
+
+var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=Bujumbura&appid=" + APIKey;
+
+$.ajax({url: queryURL, method: 'GET'})
+
+.done(function(response) {
+	console.log(response);
+	$('.city').html(response.name);
+	$('.wind').html(response.wind.speed);
+	$('.humidity').html(response.main.humidity);
+	$('.temp').html(response.main.temp);
+})

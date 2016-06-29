@@ -1,0 +1,49 @@
+JAVASCRIPT PT.2
+
+GOOGLE LATER
+JavaScript loops: continue(skips the defined step) and break(stops the defined step)
+
+TERMS
+pseudo-coding
+Laying out code notes before adding actual code to create a template to work from
+
+
+
+LINKS
+
+
+
+NOTES
+
+Array 
+A collection of variables that can be mixed(ie. consist of strings,booleans or numbers)
+syntax: 	
+create array: var coolPeople = ['bruce lee', 'arnold schwarzenegger', 'will smith', 'esther', 'marie curie', 'joan of arc'];
+call variables from array: console.log(coolPeople[0]);
+
+Loops
+For Loops
+syntax:
+	// Start with Array
+	var vegetables = ["Carrots", "Peas", "Lettuce", "Tomatoes"];
+
+	// Loops through each index of the array 
+	for (var i = 0; i < vegetables.length; i++) {
+		console.log("I love " + vegetables[i] );
+	}
+
+Hard Loops
+syntax:
+var myFarm = ["chickens", "pigs", "cows", "horses","ostriches"];
+//loop (conditions: i equals 0, i is less than the length and increment i+1 during the loop)
+//if/else (conditions: array[i] starts with a c or o run this else run that.)
+for (var i = 0; i < myFarm.length; i++) {
+	if (myFarm[i].charAt(0) == 'c' || myFarm[i].charAt(0) == 'o' ) {
+		//this
+		console.log('begins with a c or o');
+	}
+	else {
+		//that
+		console.log('cool ' + myFarm[i]);
+	}
+}

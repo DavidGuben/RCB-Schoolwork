@@ -1,0 +1,60 @@
+jQUERY
+JavaScript library with built in features and elements.
+GOOGLE CDN 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+jQUERY CDN
+<script src="https://code.jquery.com/jquery-2.2.3.js" ></script>
+
+DISPLAYING ELEMENTS WITH JAVASCRIPT (APPEND CHILD METHOD)
+First you assign a variable with the method 'document.getElementById()' that grabs
+a div already defined in the body. Then you create a new div with another variable
+with 'document.createElement()'. After that you display the new div with 
+newDiv.innerHTML = array[]. Finally you append the child to the original div with
+target.appendChild(). 
+
+	SYNTAX:
+	var target = document.getElementById("drinkOptions");
+	var newDiv = document.createElement("div");
+	newDiv.innerHTML = drinkList[i];
+	target.appendChild(newDiv);
+
+appendChild(parent) method
+adds a child to the defined parent.
+
+
+DISPLAYING ELEMENTS WITH jQUERY (APPEND CHILD METHOD)
+
+	SYNTAX:
+	var target = $('#drinkOptions');
+	var newDiv = $("<div>");
+	newDiv.html(drinkList[i]);
+	newDiv.appendTo(target);
+
+jQUERY APPEND CHILD BREAKDOWN:
+
+	// This line of Javascript "grabs" the div with the matching id (#drinkOptions);
+	var drinkDiv = $('#drinkOptions');
+	// For Loop then loops through our total drink list...
+	for (var i = 0; i < drinkList.length; i++){
+	    // It then creates a new div for each drink
+	    var newDrinkDiv = $("<div>");
+	    // It then makes the contents of this new div the drink and price
+	    newDrinkDiv.html(drinkList[i]);
+	    // It then adds this new div to the drinkList div.
+	    newDrinkDiv.appendTo(drinkDiv);
+	}
+
+jQUERY ON-CLICK EVENT
+Click events allow javascript to manipulate html elements based on weather an object is
+clicked or not(or other events based on clicks).
+	SYNTAX:
+	$('#ID').on("click", function() {
+        alert("You ate a PBJ sandwich!");
+        var divDiv = $("<div>");
+        divDiv.html(pbjCounter++);
+        divDiv.appendTo("#divName");
+    	})
+
+ADDING AN ELEMENT TO THE HTML RATHER THAN REPLACING IT
+	SYNTAX:
+	$('#DIV').html(x);

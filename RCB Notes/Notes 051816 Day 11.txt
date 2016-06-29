@@ -1,0 +1,38 @@
+LOOKUP
+JSCS
+
+
+
+JS + jQUERY 
+querySelector() adds the given id or class into the html.
+Returns the first element within the document 
+	SYNTAX:
+	document.querySelector("#blue").innerHTML = car;
+
+jQUERY BREAKDOWN
+jQuery uses the $() identifier to capture html elements
+then uses methods (ie. .on() {}) and finally uses a method to change the 
+html elements (ie .animate()).
+
+
+	.attr(p1, p2) - 1 parameter = get source, 2 parameters = set source
+	(ie. b.attr('data-let', letters[i]); - adds source(p2/letters[i]) as a paramter
+	called data-let to the b variable).
+
+
+'DATA-' BREAKDOWN
+Used to store information defined by jquery
+	SYNTAX:
+	div class="t" data-num="3" >CLICK ME</div>
+
+	$('.t').on('click', function(event) {
+ 	  var myVar = $(this).attr('data-num');
+  	  alert( myVar );
+	});
+
+LEXICAL SCOPE - 'BOXES IN BOXES'
+Essentially just nested JS. You cannot pull a variable defined from a child function inside 
+another parent function.
+(function ,{}, var) is what defines lexical scope
+
+

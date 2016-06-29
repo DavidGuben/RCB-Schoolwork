@@ -1,0 +1,13 @@
+HEROKU - CLOUD APPLICATION HOSTING PLATFORM
+
+heroku create - creates a heroku app
+
+git remote -v (displays remote connections ie. heroku)
+
+DEPLOYMENT - TAKING FILES LOCALLY AND PUTTING THEM ON A SERVER
+
+HOW TO DEPLOY TO HEROKU
+git add .
+git commit -m "message"
+git push heroku master
+

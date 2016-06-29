@@ -1,0 +1,6 @@
+
+MEDIA QUERIES
+"situational css"; defines how css is applied in relation to the viewing device
+*media queries must be enabled last.
+syntax
+@media (min-width:500px) {}

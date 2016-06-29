@@ -1,0 +1,30 @@
+LINKS
+bootswatch.com
+
+KEYWORDS
+parseInt() - parses a string and returns an integer
+confirm() - creates a 'OK or cancel' box (True or false)
+prompt() - creates a prompt
+alert() - creates a pop-up
+document.write() - writes html
+network latency - 
+S.O.L.I.D. - 
+Y.A.G.N.I. - 
+Implicit type conversion - 
+
+JAVASCRIPT NOTES
+variables 
+The things (numbers, strings, booleans)
+syntax: var name = value;
+
+,(comma)
+allows you to add more things.
+
+if-then/else statements
+Conditional statements that ask 'if this, else that'. Basically stating: If the condition
+is true do "this" else do "that".
+syntax: if(){} else if(){} else{}
+
+array
+a group of variables.
+syntax: var name = ['0','1','2'];
