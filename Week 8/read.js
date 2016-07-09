@@ -7,7 +7,7 @@ fs.readFile('movies.txt', 'utf8', (err, data) => {
    if (err) throw error;
 //log the data in the txt file
    console.log(data);
-//split the data onto two lines
+//split the data onto the next line
    var output = data.split(',');
 //for loop looping the length of the output
    for (i = 0; i < output.length; i++) {

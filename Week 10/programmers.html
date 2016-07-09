@@ -1,0 +1,49 @@
+<script>
+var inquirer = require('inquirer');
+
+
+function programmer(name, position, age, language) {
+  this.name = name,
+  this.position = position,
+  this.age = age,
+  this.language = language,
+  this.printInfo = function() {
+    console.log(" Name: " + this.name + " Position: " + this.position + " Age: " + this.age + " Launguage: " + this.language);
+  }
+}
+var count = 0;
+var programmerArray = [];
+
+var askQ = function() {
+
+  if (count > 5) {
+
+inquirer.prompt([{
+    name: "name",
+    message: "what is your name?"
+  }, {
+    name: "position"
+    message: "what po"
+  }, {
+    name:
+    message:
+  }, {
+    name:
+    message:
+}]).then(function(answers) {
+  var newGuy = ;
+  newGuy.printInfo();
+  count++;
+  askQ();
+})
+} else {
+  console.log("all questions asked");
+}
+}
+var bob = new programmer ({'Bob Smith', 'Boss', 32, 'JavaScript'});
+
+bob.printInfo();
+
+
+
+</script>
