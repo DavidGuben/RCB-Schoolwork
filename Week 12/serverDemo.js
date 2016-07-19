@@ -11,7 +11,7 @@ server.listen(port, function() {
 });
 
 //handle reqs for each path related to the port established above
-function handlereq(req, res) {
+function handleRequest(req, res) {
   var url_parts = url.parse(req.url);
   //switch case for the pathnames for each url part
   switch(url_parts.pathname) {
@@ -43,6 +43,7 @@ function display_root(url, req, res) {
 function display_portfolio(url, req, res) {
   var myHTML = '<html>';
   myHTML += '<body><h1>portfolio</h1>';
+  //since index is not defined it will go to the 404 page
   myHTML += '<a href ="/index">Go home</a>';
   myHTML += '</body></html>';
   res.writeHead(200, {'Content-Type':'text/html'});
@@ -53,6 +54,7 @@ function display_404(url, req, res) {
   //writes in the header
   res.writeHead(404, {'Content-Type':'text/html'});
   //writes in the body
+  res.write('<h1>404</h1>');
   res.write('<h1>Page Not Found</h1>');
   //writes at the end
   res.end('The page you are looking for is not found.');
