@@ -1,34 +1,34 @@
 
-// * The one listening on port 7000 will always tell the user something good about themselves.
-
-// * The one listening on 7500 will always tell the user something bad about themselves.
-
 //require http npm module
 var http = require('http');
 
-
 //establish ports to be used
 var port01 = 7000;
-
 var port02 = 7500;
 
-
 //function that handles requests and displays response
-function handleRequest(request, response) {
-  response.end('It works!!');
+function handleRequest1(request, response) {
+  response.end('You rock');
 }
 
-//create a server
-var server = http.createServer(handleRequest);
+function handleRequest2(request, response) {
+  response.end('You suck');
+}
 
-//start server
-server.listen(port01, function() {
+//create server(s)
+var server1 = http.createServer(handleRequest1);
+var server2 = http.createServer(handleRequest2);
+
+//start server(s)
+server1.listen(port01, function() {
   //log when port is listening
-  console.log('You are awesome only because you are on the ' + port01 + ' port.');
+  console.log('----------------------------------------------------------------');
+  console.log('port ' + port01 + ' connected.');
+  console.log('----------------------------------------------------------------');
 });
 
-//start server
-server.listen(port02, function() {
-  //log when port is listening
-  console.log('You are dumb only because you are on the ' + port02 + ' port.');
+server2.listen(port02, function() {
+  console.log('----------------------------------------------------------------');
+  console.log('port ' + port02 + ' connected.');
+  console.log('----------------------------------------------------------------');
 });
