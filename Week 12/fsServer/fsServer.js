@@ -64,8 +64,6 @@ function display_404(url, req, res) {
   });
 }
 
-
-
 //server listen to port to make sure it's listening/working.
 server.listen(port, function() {
   console.log('Server listenind on port: ' + port);
