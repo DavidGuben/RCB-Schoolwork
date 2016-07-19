@@ -22,6 +22,7 @@ function handlereq(req, res) {
       display_portfolio(url_parts.pathname, req, res);
       break;
     case "/edit":
+      //sys.puts displays whatever is written inside it, similarly to console.log
       sys.puts("display edit");
       break;
     default:
