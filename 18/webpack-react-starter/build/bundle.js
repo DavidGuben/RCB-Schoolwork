@@ -49,15 +49,37 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
 
-	var name = "world";
+	var name = "World";
 	var sampleJSX = React.createElement(
 	  'p',
 	  null,
 	  'Hello ',
 	  name
 	);
+	var foo = 9342042;
 
-	ReactDOM.render(sampleJSX, document.getElementById('target'));
+	ReactDOM.render(React.createElement(
+	  'div',
+	  null,
+	  React.createElement(
+	    'h2',
+	    null,
+	    'my name is ',
+	    name
+	  ),
+	  React.createElement(
+	    'h1',
+	    null,
+	    'math can be done: ',
+	    foo,
+	    ' + ',
+	    foo,
+	    ' * ',
+	    foo,
+	    ' = ',
+	    foo + foo * foo
+	  )
+	), document.getElementById('target'));
 
 /***/ },
 /* 1 */
